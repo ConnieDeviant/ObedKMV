@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>ObedKMV</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/templatemo-style.css" />
+<!--
+Verticard Template
+https://templatemo.com/tm-533-verticard
+-->
+
+<!--
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>-->
+
+
+<style class="bg-block" style="">
+  body {
+  background: url(img/fon1.jpg);
+  background-attachment: fixed;
+   }
+</style>
+
+
+</head>
+
+<body>
+
+  <div class="tm-page-container mx-auto">
+    <header class="tm-header text-center">
+      <h1 class="tm-title text-uppercase">ОБЕДЫ С ДОСТАВКОЙ</h1>
+      <p class="tm-primary-color"><i>Пятигорск, Иноземцево</i></p>
+    </header>
+
+    <section class="tm-section">
+      <nav class="tm-nav">
+        <ul>
+          <li class="active">
+            <a href="index.php"><span class="tm-nav-deco"></span>Главная</a>
+          </li>
+          <li>
+            <a href="gallery.php"><span class="tm-nav-deco"></span>Меню</a>
+          </li>
+          <li>
+            <a href="contact.php"><span class="tm-nav-deco"></span>Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+
+
+      <div class="tm-content-container">
+        <figure class="mb-0">
+          <img src="img/img-1.jpg" alt="Image" class="img-fluid tm-img" />
+        </figure>
+        <div class="tm-content">
+          <h2 class="tm-page-title">О компании</h2>
+          <p class="mb-4">
+            Наша компания более 10 лет занимается доставкой обедов и в настоящий момент является одним из лидеров в данной сфере. Одно из приоритетных направлений - кейтеринг и организация корпоративного питания, куда входит также открытие столовых и буфетов на территории офисных и торговых центров.
+
+          </p>
+          <p>
+            Мы сотрудничаем с целым рядом крупных организаций, и наши партнеры положительно оценивают качество наших услуг. Мы всегда готовы предложить свежую и качественную продукцию и осуществить быструю доставку по всей территории Кавказских Минеральных Вод.
+            ООО «Риал-Хобби» – это богатый опыт, профессионализм и индивидуальный подход к каждому клиенту.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>ООО «Риал-Хобби»
+357500, Россия, г. Пятигорск, пр. Калинина, 9</span>
+    </footer>
+<footer>
+  <span>Все права защищены © «Риал-Хобби» 2005 - 2022</span>
+  </footer>
+  </div>
+</body>
+
+</html>

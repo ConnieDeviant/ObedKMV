@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>ObedKMV</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/templatemo-style.css" />
+<!--
+Verticard Template
+https://templatemo.com/tm-533-verticard
+-->
+
+<style>
+footer {
+    border: 1px;
+    margin: 25px;
+    
+}
+</style>
+
+<style class="bg-block" style="">
+  body {
+  background: url(img/fon1.jpg);
+  background-attachment: fixed;
+   }
+</style>
+
+
+</head>
+
+<body>
+  <div class="tm-page-container mx-auto">
+    <header class="tm-header text-center">
+      <h1 class="tm-title text-uppercase">ОБЕДЫ С ДОСТАВКОЙ</h1>
+      <p class="tm-primary-color"><i>по Пятигорску, Иноземцево</i></p>
+    </header>
+
+    <section class="tm-section">
+      <nav class="tm-nav">
+        <ul>
+          <li>
+            <a href="index.php"><span class="tm-nav-deco"></span>Главная</a>
+          </li>
+          <li>
+            <a href="gallery.php"><span class="tm-nav-deco"></span>Меню</a>
+          </li>
+          <li class="active">
+            <a href="contact.php"><span class="tm-nav-deco"></span>Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+
+            <div class="tm-content-container">
+                <div class="mb-0 tm-img-overlay-wrap">
+                    <div class="tm-img-overlay"></div>
+                    <div class="tm-img-overlay-text text-white p-5">
+                        <h4 class="mb-4">ООО «Риал-Хобби»</h4>
+                        <p class="tm-small">
+                            Телефоны:<br>
+8 (8793) 400-444<br>
+8 (8793) 32-98-68<br>
+8 (905) 415-11-12<br>
+8 (928) 633-56-78<br>
+8 (918) 771-80-97<br>
+<br>
+Наш адрес:
+357500, Россия, г. Пятигорск, пр. Калинина, 9
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+
+<footer>
+
+      <span>ООО «Риал-Хобби»
+357500, Россия, г. Пятигорск, пр. Калинина, 9</span>
+    </footer>
+<div class="gmap_canvas" style="width: 70%;">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d852.4883149023068!2d43.06654402439199!3d44.05408742349827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405776272f4ce6f1%3A0x9d145206c9bf5af6!2z0J_Rj9GC0LjQs9C-0YDRgdC60LjQuSDQs9C-0YHRg9C00LDRgNGB0YLQstC10L3QvdGL0Lkg0YPQvdC40LLQtdGA0YHQuNGC0LXRgg!5e0!3m2!1sru!2sru!4v1744664095010!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+        
+<footer>
+  <span>Все права защищены © «Риал-Хобби» 2005 - 2022</span>
+  </footer>
+
+    </div>
+</body>
+
+</html>
