@@ -1,0 +1,905 @@
+<?php
+
+include_once('setup.php');
+
+$salat="SELECT * FROM `menu` WHERE `kat`='САЛАТЫ'";
+$sql=mysqli_query($link, $salat);
+
+$pervoe="SELECT * FROM `menu` WHERE `kat`='ПЕРВОЕ'";
+$sql1=mysqli_query($link, $pervoe);
+
+$vtoroe="SELECT * FROM `menu` WHERE `kat`='ВТОРОЕ'";
+$sql2=mysqli_query($link, $vtoroe);
+
+$garneer="SELECT * FROM `menu` WHERE `kat`='ГАРНИРЫ'";
+$sql3=mysqli_query($link, $garneer);
+
+$sous="SELECT * FROM `menu` WHERE `kat`='СОУСА'";
+$sql4=mysqli_query($link, $sous);
+
+$hleb="SELECT * FROM `menu` WHERE `kat`='МУЧНЫЕ'";
+$sql5=mysqli_query($link, $hleb);
+
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>ObedKMV</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+ 
+  <link rel="stylesheet" href="css/templatemo-style.css" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <link type="text/css" href="style.css" rel="stylesheet">
+<script defer src="js/cart.js"></script>
+
+<style class="bg-block" style="">
+  body {
+  background: url(img/fon1.jpg);
+  background-attachment: fixed;
+   }
+
+  table{
+   border:0px solid grey;
+   border-collapse: collapse;
+    width: 100%;
+}
+
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.placeholder-box {
+  display: block; 
+  position: relative;
+  margin: 20px 0;
+}
+.placeholder-box input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+.placeholder-text {    
+  display: none;
+  width: 100%; 
+  line-height: 37px;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  color: #888;
+  cursor: text;
+  user-select: none;
+}
+ 
+.placeholder-box input:invalid + .placeholder-text {
+  display: block;
+}
+
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css">
+
+
+
+
+
+
+</head>
+
+<body><div class="container">
+  <div class="tm-page-container mx-auto">
+    <header class="tm-header text-center">
+      <h1 class="tm-title text-uppercase">ОБЕДЫ С ДОСТАВКОЙ</h1>
+      <p class="tm-primary-color"><i>по Пятигорску, Иноземцево</i></p>
+    </header>
+
+    <section class="tm-section">
+      <nav class="tm-nav">
+        <ul>
+          <li>
+            <a href="index.html"><span class="tm-nav-deco"></span>Главная</a>
+          </li>
+          <li class="active">
+            <a href="gallery.php"><span class="tm-nav-deco"></span>Меню</a>
+          </li>
+          <li>
+            <a href="contact.html"><span class="tm-nav-deco"></span>Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+
+  
+         
+
+
+  <h2 style="text-align: center;"> МЕНЮ:</h2>
+                                           
+  <div class="dropdown">
+    <button type="button" class="btn btn-body dropdown-toggle" data-toggle="dropdown"  style="background-color: #93b38a; width: 100%; margin-top: 10px; margin-bottom: 10px;">
+      Первое
+    </button>
+    <div class="dropdown-menu">
+      
+
+      <a class="dropdown-item" style="overflow-x:auto;">
+   
+        <table class="table table-hover"> 
+          <tr>
+        <th>Название</th>
+        <th>Порция</th>
+        <th>Цена</th>
+       
+        <th>Действие</th>
+      </tr>
+  <!-- ?php
+          while ($res=mysqli_fetch_array($sql1)) {
+            ? -->    
+       
+<!-- //////////////////////////////////////////////////// -->         
+                
+<tr class="bld" id="pb"> 
+        
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="Обед КМВ">
+  <meta itemprop="name" content="Суп лапша с грибами">
+  <meta itemprop="description" content="Первое блюдо, порция 500 г.">
+  <meta itemprop="productID" content="1">
+  <meta itemprop="url" content="https://obedkmv.ru">
+  <meta itemprop="image" content="img/micpic/pervoe.png">
+    
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+ <meta itemprop="availability" content="available for order">
+   <meta itemprop="condition" content="new"> 
+   <meta itemprop="price" content="55">
+    <meta itemprop="priceCurrency" content="RUB">
+  </div>
+</div>
+
+ <td class="item1">Суп лапша с грибами</td>
+        <td>500 г.</td>
+        <th>55 руб.</th>
+       
+       
+       <td class="td">  <button class="cart-add" data-name="Суп лапша с грибами" data-price="55" data-image="img/micpic/pervoe.png">В корзину</button></td> 
+
+       </tr>
+
+<tr class="bld" id="pb"> 
+        
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="Обед КМВ">
+  <meta itemprop="name" content="Харчо">
+  <meta itemprop="description" content="Первое блюдо, порция 500 г.">
+  <meta itemprop="productID" content="1">
+  <meta itemprop="url" content="https://obedkmv.ru">
+  <meta itemprop="image" content="img/micpic/pervoe.png">
+    
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+ <meta itemprop="availability" content="available for order">
+   <meta itemprop="condition" content="new"> 
+   <meta itemprop="price" content="110">
+    <meta itemprop="priceCurrency" content="RUB">
+  </div>
+</div>
+
+ <td class="item1">Харчо</td>
+        <td>500 г.</td>
+        <th>110 руб.</th>
+       
+       
+       <td class="td">  <button class="cart-add" data-name="Харчо" data-price="110" data-image="img/micpic/pervoe.png">В корзину</button></td> 
+     
+<!-- //////////////////////////////////////////////////// -->    
+     <<!-- ?php
+          }
+          ? -->>         
+</table>
+
+</a>
+ </div>
+</div>
+
+
+
+
+
+
+ <div class="dropdown">
+    <button type="button" class="btn btn-body dropdown-toggle" data-toggle="dropdown" style="background-color: #93b38a; width: 100%;">
+      Салаты
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">
+      <table class="table table-hover">
+        <th>Название</th>
+        <th>Порция</th>
+        <th>Цена</th>
+        <th>Действие</th>
+<!-- //////////////////////////////////////////////////// -->       
+       <tr class="bld" id="pb"> 
+
+
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="Обед КМВ">
+  <meta itemprop="name" content="Корейская морковь">
+  <meta itemprop="description" content="Салат, порция 100> г.">
+  <meta itemprop="productID" content="1">
+  <meta itemprop="url" content="https://obedkmv.ru">
+  <meta itemprop="image" content="img/micpic/salat.png">
+    
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+ <meta itemprop="availability" content="available for order">
+   <meta itemprop="condition" content="new"> 
+   <meta itemprop="price" content="50">
+    <meta itemprop="priceCurrency" content="RUB">
+  </div>
+</div>
+
+
+        
+ <td>Корейская морковь</td>
+        <td>100 г.</td>
+        <th>50 руб.</th>
+       
+       
+       <td class="td">  <button class="cart-add" data-name="Корейская морковь" data-price="50" data-image="img/micpic/salat.png">В корзину</button></td> 
+
+       </tr>
+<!-- ///////РАЗДЕЛЕНИЕ/////////////////// -->
+<tr class="bld" id="pb"> 
+
+
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="Обед КМВ">
+  <meta itemprop="name" content="Салат Греческий">
+  <meta itemprop="description" content="Салат, порция 130 г.">
+  <meta itemprop="productID" content="1">
+  <meta itemprop="url" content="https://obedkmv.ru">
+  <meta itemprop="image" content="img/micpic/salat.png">
+    
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+ <meta itemprop="availability" content="available for order">
+   <meta itemprop="condition" content="new"> 
+   <meta itemprop="price" content="60">
+    <meta itemprop="priceCurrency" content="RUB">
+  </div>
+</div>
+
+
+        
+ <td>Салат "Греческий"</td>
+        <td>100 г.</td>
+        <th>60 руб.</th>
+       
+       
+       <td class="td">  <button class="cart-add" data-name="Салат Греческий" data-price="60" data-image="img/micpic/salat.png">В корзину</button></td> 
+
+       </tr> 
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// --> 
+<!-- ///////РАЗДЕЛЕНИЕ/////////////////// -->
+<tr class="bld" id="pb"> 
+
+
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="Обед КМВ">
+  <meta itemprop="name" content="Салат Московский">
+  <meta itemprop="description" content="Салат, порция 150 г.">
+  <meta itemprop="productID" content="1">
+  <meta itemprop="url" content="https://obedkmv.ru">
+  <meta itemprop="image" content="img/micpic/salat.png">
+    
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+ <meta itemprop="availability" content="available for order">
+   <meta itemprop="condition" content="new"> 
+   <meta itemprop="price" content="80">
+    <meta itemprop="priceCurrency" content="RUB">
+  </div>
+</div>
+
+
+        
+ <td>Салат "Московский"</td>
+        <td>150 г.</td>
+        <th>80 руб.</th>
+       
+       
+       <td class="td">  <button class="cart-add" data-name="Салат Московский" data-price="80" data-image="img/micpic/salat.png">В корзину</button></td> 
+
+       </tr> 
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->
+<!-- ///////РАЗДЕЛЕНИЕ/////////////////// -->
+<tr class="bld" id="pb"> 
+
+
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="Обед КМВ">
+  <meta itemprop="name" content="Помидоры соленые">
+  <meta itemprop="description" content="Салат, порция 100 г.">
+  <meta itemprop="productID" content="1">
+  <meta itemprop="url" content="https://obedkmv.ru">
+  <meta itemprop="image" content="img/micpic/salat.png">
+    
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+ <meta itemprop="availability" content="available for order">
+   <meta itemprop="condition" content="new"> 
+   <meta itemprop="price" content="45">
+    <meta itemprop="priceCurrency" content="RUB">
+  </div>
+</div>
+
+
+        
+ <td>Помидоры соленые</td>
+        <td>100 г.</td>
+        <th>45 руб.</th>
+       
+       
+       <td class="td">  <button class="cart-add" data-name="Помидоры соленые" data-price="45" data-image="img/micpic/salat.png">В корзину</button></td> 
+
+       </tr> 
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->                         
+</table></a>
+ </div>
+</div>
+          
+
+
+
+<div class="dropdown">
+    <button type="button" class="btn btn-body dropdown-toggle" data-toggle="dropdown"  style="background-color: #93b38a; width: 100%; margin-top: 10px; margin-bottom: 5px;">
+      Второе
+    </button>
+    <div class="dropdown-menu">
+      
+
+      <a class="dropdown-item">
+        <table class="table table-hover"> 
+          <tr>
+        <th>Название</th>
+        <th>Порция</th>
+        <th>Цена</th>
+        <th>Действие</th>
+      </tr>
+        
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->  
+<tr class="bld" id="pb"> 
+
+
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="Обед КМВ">
+  <meta itemprop="name" content="Котлета куриная">
+  <meta itemprop="description" content="Второе блюдо, порция 100 г.">
+  <meta itemprop="productID" content="1">
+  <meta itemprop="url" content="https://obedkmv.ru">
+  <meta itemprop="image" content="img/micpic/vtoroe.png">
+    
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+ <meta itemprop="availability" content="available for order">
+   <meta itemprop="condition" content="new"> 
+   <meta itemprop="price" content="70">
+    <meta itemprop="priceCurrency" content="RUB">
+  </div>
+</div>
+
+        
+ <td>Котлета куриная</td>
+        <td>100 г.</td>
+        <th>70 руб.</th>
+       
+       
+       <td class="td">  <button class="cart-add" data-name="Котлета куриная" data-price="70" data-image="img/micpic/vtoroe.png">В корзину</button></td> 
+
+       </tr>
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// --> 
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->  
+<tr class="bld" id="pb"> 
+
+
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="Обед КМВ">
+  <meta itemprop="name" content="Куриная отбивная Барбара">
+  <meta itemprop="description" content="Второе блюдо, порция 100 г.">
+  <meta itemprop="productID" content="1">
+  <meta itemprop="url" content="https://obedkmv.ru">
+  <meta itemprop="image" content="img/micpic/vtoroe.png">
+    
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+ <meta itemprop="availability" content="available for order">
+   <meta itemprop="condition" content="new"> 
+   <meta itemprop="price" content="98">
+    <meta itemprop="priceCurrency" content="RUB">
+  </div>
+</div>
+
+        
+ <td>Куриная отбивная Барбара</td>
+        <td>100 г.</td>
+        <th>98 руб.</th>
+       
+       
+       <td class="td">  <button class="cart-add" data-name="Котлета куриная" data-price="98" data-image="img/micpic/vtoroe.png">В корзину</button></td> 
+
+       </tr>
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// --> 
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->  
+<tr class="bld" id="pb"> 
+
+
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="Обед КМВ">
+  <meta itemprop="name" content="Плов куриный">
+  <meta itemprop="description" content="Второе блюдо, порция 250 г.">
+  <meta itemprop="productID" content="1">
+  <meta itemprop="url" content="https://obedkmv.ru">
+  <meta itemprop="image" content="img/micpic/vtoroe.png">
+    
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+ <meta itemprop="availability" content="available for order">
+   <meta itemprop="condition" content="new"> 
+   <meta itemprop="price" content="80">
+    <meta itemprop="priceCurrency" content="RUB">
+  </div>
+</div>
+
+        
+ <td>Плов куриный</td>
+        <td>250 г.</td>
+        <th>80 руб.</th>
+       
+       
+       <td class="td">  <button class="cart-add" data-name="Плов куриный" data-price="80" data-image="img/micpic/vtoroe.png">В корзину</button></td> 
+
+       </tr>
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->   
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->  
+<tr class="bld" id="pb"> 
+
+
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="Обед КМВ">
+  <meta itemprop="name" content="Цыпленок рождественский">
+  <meta itemprop="description" content="Второе блюдо, порция 100 г.">
+  <meta itemprop="productID" content="1">
+  <meta itemprop="url" content="https://obedkmv.ru">
+  <meta itemprop="image" content="img/micpic/vtoroe.png">
+    
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+ <meta itemprop="availability" content="available for order">
+   <meta itemprop="condition" content="new"> 
+   <meta itemprop="price" content="90">
+    <meta itemprop="priceCurrency" content="RUB">
+  </div>
+</div>
+
+        
+ <td>Цыпленок рождественский</td>
+        <td>100 г.</td>
+        <th>90 руб.</th>
+       
+       
+       <td class="td">  <button class="cart-add" data-name="Цыпленок рождественский" data-price="90" data-image="img/micpic/vtoroe.png">В корзину</button></td> 
+
+       </tr>
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->    
+       
+</table>
+</a>
+ </div>
+</div>
+
+
+<div class="dropdown">
+    <button type="button" class="btn btn-body dropdown-toggle" data-toggle="dropdown"  style="background-color: #93b38a; width: 100%; margin-top: 5px; margin-bottom: 5px;">
+      Гарнир
+    </button>
+    <div class="dropdown-menu">
+      
+
+      <a class="dropdown-item">
+        <table class="table table-hover"> 
+          <tr>
+        <th>Название</th>
+        <th>Порция</th>
+        <th>Цена</th>
+        <th>Действие</th>
+      </tr>
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->        
+<tr class="bld" id="pb"> 
+
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="Обед КМВ">
+  <meta itemprop="name" content="Заливка овощная">
+  <meta itemprop="description" content="Гарнир, порция 100 г.">
+  <meta itemprop="productID" content="1">
+  <meta itemprop="url" content="https://obedkmv.ru">
+  <meta itemprop="image" content="img/micpic/garnir.png">
+    
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+ <meta itemprop="availability" content="available for order">
+   <meta itemprop="condition" content="new"> 
+   <meta itemprop="price" content="50">
+    <meta itemprop="priceCurrency" content="RUB">
+  </div>
+</div>
+        
+ <td>Заливка овощная</td>
+        <td>100 г.</td>
+        <th>50 руб.</th>
+       
+       
+       <td class="td">  <button class="cart-add" data-name="Заливка овощная" data-price="50" data-image="img/micpic/garnir.png">В корзину</button></td> 
+
+       </tr>
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// --> 
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->        
+<tr class="bld" id="pb"> 
+
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="Обед КМВ">
+  <meta itemprop="name" content="Картофельное пюре">
+  <meta itemprop="description" content="Гарнир, порция 200 г.">
+  <meta itemprop="productID" content="1">
+  <meta itemprop="url" content="https://obedkmv.ru">
+  <meta itemprop="image" content="img/micpic/garnir.png">
+    
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+ <meta itemprop="availability" content="available for order">
+   <meta itemprop="condition" content="new"> 
+   <meta itemprop="price" content="60">
+    <meta itemprop="priceCurrency" content="RUB">
+  </div>
+</div>
+        
+ <td>Картофельное пюре</td>
+        <td>200 г.</td>
+        <th>60 руб.</th>
+       
+       
+       <td class="td">  <button class="cart-add" data-name="Картофельное пюре" data-price="60" data-image="img/micpic/garnir.png">В корзину</button></td> 
+
+       </tr>
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// --> 
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->        
+<tr class="bld" id="pb"> 
+
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="Обед КМВ">
+  <meta itemprop="name" content="Рис по-Турецки">
+  <meta itemprop="description" content="Гарнир, порция 150 г.">
+  <meta itemprop="productID" content="1">
+  <meta itemprop="url" content="https://obedkmv.ru">
+  <meta itemprop="image" content="img/micpic/garnir.png">
+    
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+ <meta itemprop="availability" content="available for order">
+   <meta itemprop="condition" content="new"> 
+   <meta itemprop="price" content="40">
+    <meta itemprop="priceCurrency" content="RUB">
+  </div>
+</div>
+        
+ <td>Рис по-Турецки</td>
+        <td>150 г.</td>
+        <th>40 руб.</th>
+       
+       
+       <td class="td">  <button class="cart-add" data-name="Рис по-Турецки" data-price="40" data-image="img/micpic/garnir.png">В корзину</button></td> 
+
+       </tr>
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->    
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->        
+<tr class="bld" id="pb"> 
+
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="Обед КМВ">
+  <meta itemprop="name" content="Макароны">
+  <meta itemprop="description" content="Гарнир, порция 150 г.">
+  <meta itemprop="productID" content="1">
+  <meta itemprop="url" content="https://obedkmv.ru">
+  <meta itemprop="image" content="img/micpic/garnir.png">
+    
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+ <meta itemprop="availability" content="available for order">
+   <meta itemprop="condition" content="new"> 
+   <meta itemprop="price" content="45">
+    <meta itemprop="priceCurrency" content="RUB">
+  </div>
+</div>
+        
+ <td>Макароны</td>
+        <td>150 г.</td>
+        <th>45 руб.</th>
+       
+       
+       <td class="td">  <button class="cart-add" data-name="Макароны" data-price="45" data-image="img/micpic/garnir.png">В корзину</button></td> 
+
+       </tr>
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->  
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->        
+<tr class="bld" id="pb"> 
+
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="Обед КМВ">
+  <meta itemprop="name" content="Шампиньоны с овощами">
+  <meta itemprop="description" content="Гарнир, порция 100 г.">
+  <meta itemprop="productID" content="1">
+  <meta itemprop="url" content="https://obedkmv.ru">
+  <meta itemprop="image" content="img/micpic/garnir.png">
+    
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+ <meta itemprop="availability" content="available for order">
+   <meta itemprop="condition" content="new"> 
+   <meta itemprop="price" content="98">
+    <meta itemprop="priceCurrency" content="RUB">
+  </div>
+</div>
+        
+ <td>Шампиньоны с овощами</td>
+        <td>100 г.</td>
+        <th>98 руб.</th>
+       
+       
+       <td class="td">  <button class="cart-add" data-name="Шампиньоны с овощами" data-price="98" data-image="img/micpic/garnir.png">В корзину</button></td> 
+
+       </tr>
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->    
+        
+</table>
+</a>
+ </div>
+</div>
+
+<div class="dropdown">
+    <button type="button" class="btn btn-body dropdown-toggle" data-toggle="dropdown"  style="background-color: #93b38a; width: 100%; margin-top: 5px; margin-bottom: 5px;">
+      Соусы
+    </button>
+    <div class="dropdown-menu">
+      
+
+      <a class="dropdown-item">
+        <table class="table table-hover"> 
+          <tr>
+        <th>Название</th>
+        <th>Порция</th>
+        <th>Цена</th>
+        <th>Действие</th>
+      </tr>
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->              
+<tr class="bld" id="pb"> 
+
+
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="Обед КМВ">
+  <meta itemprop="name" content="Сметана">
+  <meta itemprop="description" content="Соусы, порция 25 г.">
+  <meta itemprop="productID" content="1">
+  <meta itemprop="url" content="https://obedkmv.ru">
+  <meta itemprop="image" content="img/micpic/sous.png">
+    
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+ <meta itemprop="availability" content="available for order">
+   <meta itemprop="condition" content="new"> 
+   <meta itemprop="price" content="20">
+    <meta itemprop="priceCurrency" content="RUB">
+  </div>
+</div>
+
+        
+ <td>Сметана</td>
+        <td>25 г.</td>
+        <th>20 руб.</th>
+       
+       
+       <td class="td">  <button class="cart-add" data-name="Сметана" data-price="20" data-image="img/micpic/sous.png">В корзину</button></td> 
+
+       </tr>
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->         
+   
+            
+</table>
+</a>
+ </div>
+</div>
+
+<div class="dropdown">
+    <button type="button" class="btn btn-body dropdown-toggle" data-toggle="dropdown"  style="background-color: #93b38a; width: 100%; margin-top: 5px; margin-bottom: 20px;">
+      Мучные
+    </button>
+    <div class="dropdown-menu">
+      
+
+      <a class="dropdown-item">
+        <table class="table table-hover"> 
+          <tr>
+        <th>Название</th>
+        <th>Порция</th>
+        <th>Цена</th>
+        <th>Действие</th>
+      </tr>
+          
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->
+<tr class="bld" id="pb"> 
+
+
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="Обед КМВ">
+  <meta itemprop="name" content="Хлеб">
+  <meta itemprop="description" content="Мучные, порция 30 г.">
+  <meta itemprop="productID" content="1">
+  <meta itemprop="url" content="https://obedkmv.ru">
+  <meta itemprop="image" content="img/micpic/muchn.png">
+    
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+ <meta itemprop="availability" content="available for order">
+   <meta itemprop="condition" content="new"> 
+   <meta itemprop="price" content="3">
+    <meta itemprop="priceCurrency" content="RUB">
+  </div>
+</div>
+
+        
+ <td>Хлеб</td>
+        <td>30 г.</td>
+        <th>3 руб.</th>
+       
+       
+       <td class="td">  <button class="cart-add" data-name="Хлеб" data-price="3" data-image="img/micpic/muchn.png">В корзину</button></td> 
+
+       </tr>
+     
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// --> 
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->
+<tr class="bld" id="pb"> 
+
+
+<div itemscope itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="Обед КМВ">
+  <meta itemprop="name" content="Хлеб бородинский">
+  <meta itemprop="description" content="Мучные, порция 30 г.">
+  <meta itemprop="productID" content="1">
+  <meta itemprop="url" content="https://obedkmv.ru">
+  <meta itemprop="image" content="img/micpic/muchn.png">
+    
+  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+ <meta itemprop="availability" content="available for order">
+   <meta itemprop="condition" content="new"> 
+   <meta itemprop="price" content="3">
+    <meta itemprop="priceCurrency" content="RUB">
+  </div>
+</div>
+
+        
+ <td>Хлеб бородинский</td>
+        <td>30 г.</td>
+        <th>3 руб.</th>
+       
+       
+       <td class="td">  <button class="cart-add" data-name="Хлеб бородинский" data-price="3" data-image="img/micpic/muchn.png">В корзину</button></td> 
+
+       </tr>
+     
+<!-- //////////////РАЗДЕЛЕНИЕ/////////////////// -->     
+   
+              
+</table>
+</a>
+ </div>
+</div>
+
+   
+
+<c-cart currency="₽" fab="1" action="thankyou.html" method="post">
+
+ <!--
+<div slot="header" class="my-header">
+  содержимое вашего хидера 
+ </div>-->
+ 
+  <div slot="underitems" class="my-bonuses">
+<h4 style="color: #9f9f9f;">Доставка по г. Пятигорску и КМВ</h4>
+<p>Все вопросы принимаются по <a href="tel:79280135958"><i class="fa fa-phone"></i><span style="color: #327339;"> 8-928-013-59-58</span></a> 
+</p>
+ </div>
+
+
+  
+ <div slot="form" class="my-form">
+ <form class="my-form" action="thankyou.html" method="post">
+  <label class="placeholder-box">
+  <input required type="text" name="name">
+  <div class="placeholder-text">Имя получателя...</div>
+</label>
+  
+<label class="placeholder-box">
+  <input required type="tel" name="phone"> 
+  <div class="placeholder-text">Номер телефона...</span></div>
+</label>
+
+<label class="placeholder-box">
+  <input required type="text" name="adress">
+  <div class="placeholder-text">Адрес доставки...</span></div>
+</label>
+
+ <input type='hidden' name='cart'>
+  <input type="submit" value="Оформить заказ" style="background-color: #7da66f; width: 100%; height: 40px; margin-bottom: 20px; border-radius: 10px;">
+  <br><br>
+<input type="reset" name="reset" style="background-color: #ebeee7; width: 100%; height: 30px; margin-bottom: 20px; border-radius: 10px; margin-bottom: 20px">
+
+
+
+ </form> 
+ </div>
+ <!--
+ <div slot="underform" class="my-whatever">
+  что-то критически важное тут
+</div> -->
+
+</c-cart>
+
+
+
+
+
+
+
+
+<div class="tm-page-container mx-auto">
+
+         
+                    
+             
+
+
+    <footer>
+      <span>ООО «Риал-Хобби»
+357500, Россия, г. Пятигорск, пр. Калинина, 9</span>
+    </footer>
+<footer>
+  <span>Все права защищены © «Риал-Хобби» 2005 - 2022</span>
+  </footer>
+
+</div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Magnific Pop up
+      // https://dimsemenov.com/plugins/magnific-popup/
+      $('.tm-gallery').magnificPopup({
+        delegate: 'a', // child items selector, by clicking on it popup will open
+        type: 'image',
+        gallery: {
+          enabled: true
+        },
+      });
+    });
+  </script>
+
+
+
+</body>
+</html>
